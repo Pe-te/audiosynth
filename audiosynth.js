@@ -132,7 +132,7 @@ var Synth, AudioSynth, AudioSynthInstrument;
 
 			var out = [
 				'RIFF',
-				pack(1, 4 + (8 + 24/* chunk 1 length */) + (8 + 8/* chunk 2 length */)), // Length
+				pack(1, 36 + data.length * channels * bitsPerSample / 8), // Length
 				'WAVE',
 				// chunk 1
 				'fmt ', // Sub-chunk identifier
